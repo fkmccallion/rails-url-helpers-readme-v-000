@@ -1,5 +1,6 @@
 <% @posts.each do |post| %>
   <!--<div><a href='<%= "/posts/#{post.id}" %>'><%= post.title %></a></div>-->
   <!--<div><%= link_to post.title, "/posts/#{post.id}" %>--> <!-- Accomplishes same function as above -->
-  <div><%= link_to post.title, post_path(post.id) %> <!-- Refactored above removing string interpolation -->
+  <!--<div><%= link_to post.title, post_path(post.id) %>--> <!-- Refactored above removing string interpolation -->
+  <div><%= link_to post.title, post_path(post) %></div> <!-- Refactored removing ID attribute -->
 <% end %>
